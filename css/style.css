@@ -19,6 +19,8 @@ body {
   }
 }
 header {
+  background: rgba(202, 213, 214, 0.137254902);
+  backdrop-filter: blur(5px);
   box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.3294117647);
   padding: 10px 0;
   position: sticky;
@@ -32,6 +34,8 @@ header {
   header {
     position: relative;
     padding: 5px 0;
+    backdrop-filter: none;
+    background: linear-gradient(55deg, #fff 50%, #f8f8f8 90%);
   }
 }
 header .header-container {
@@ -64,18 +68,19 @@ header .header-container .hero h2::first-letter {
 }
 @media screen and (min-width: 768px) {
   header .header-container .hero h2 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
 }
 header .header-container .hero span {
+  font-family: "roboto", sans-serif;
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding-left: 7px;
   font-size: 0.7rem;
   font-weight: 600;
   display: block;
   text-transform: capitalize;
-  color: rgb(0, 0, 0);
+  color: rgb(36, 36, 36);
 }
 header .header-container nav {
   display: none;
@@ -355,7 +360,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   animation: ticker 25s linear infinite;
 }
 .about .text-ticker .text-wrap .text-content span {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "montserrat", sans-serif;
   text-transform: uppercase;
   color: rgba(0, 38, 43, 0.0901960784);
   font-weight: 900;
@@ -399,7 +404,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   }
 }
 .about .about-text {
-  padding-top: 50px;
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -426,6 +431,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   color: rgba(0, 38, 43, 0.6705882353);
   font-family: "Baskervville SC", serif;
   text-transform: capitalize;
+  padding: 10px 0;
 }
 .about .about-text p {
   color: #00262b;
@@ -433,6 +439,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   word-spacing: 2px;
   line-height: 1.7rem;
   font-family: "roboto", sans-serif;
+  font-weight: 500;
 }
 
 .services-title {
@@ -500,7 +507,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   text-align: center;
 }
 .services h5 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Baskervville SC", serif;
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 1.2rem;
@@ -554,6 +561,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
 
 .gallery {
   text-align: center;
+  font-family: "Baskervville SC", serif;
 }
 .gallery .gallery-title {
   position: relative;
@@ -609,7 +617,6 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   }
 }
 .gallery h5 {
-  font-family: "Times New Roman", Times, serif;
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 1.2rem;
@@ -690,7 +697,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   z-index: 1222;
   color: rgb(12, 12, 12);
   background-color: rgba(226, 226, 226, 0.8156862745);
-  padding: 10px;
+  padding: 12px;
   backdrop-filter: blur(10px);
 }
 
@@ -726,15 +733,20 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   font-size: 2.1rem;
   font-weight: 400;
 }
+.banner-experience .banner-experience-text .span-num b {
+  font-size: 1rem;
+}
 .banner-experience .banner-experience-text span {
   margin: 0;
   display: inline-block;
   color: rgba(248, 250, 250, 0.9058823529);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
-.banner-experience .banner-experience-text span b {
-  font-size: 1rem;
+@media screen and (min-width: 576px) {
+  .banner-experience .banner-experience-text span {
+    font-size: 1.4rem;
+  }
 }
 
 .contact {
@@ -899,7 +911,7 @@ header .header-container .sidebar-container .sidebar .side-menu .side-list .side
   animation: ticker 25s linear infinite;
 }
 .swiper .text-ticker .text-wrap .text-content span {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "montserrat", sans-serif;
   text-transform: uppercase;
   color: rgba(0, 38, 43, 0.0901960784);
   font-weight: 900;
@@ -1468,7 +1480,7 @@ footer .footer-bottom {
 }
 footer .footer-bottom span {
   color: #bdbdbd;
-  padding: 10px 0;
+  padding: 14px 0;
   display: inline-block;
   text-transform: capitalize;
   font-size: 0.7rem;
@@ -1596,10 +1608,12 @@ footer .footer-bottom span b {
   }
 }
 .contact-page-links h5 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Baskervville SC", serif;
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  line-height: 1.7rem;
+  word-spacing: 2px;
   font-weight: 400;
   color: #00262b;
   width: 70%;
