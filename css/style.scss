@@ -17,17 +17,16 @@ body{
   }
 }
 header{
-background: #cad5d623;
-backdrop-filter: blur(5px);
-//background:linear-gradient(55deg, #fff0f9, #f3f3f0e1);
+  background: #cad5d67c;
+  backdrop-filter: blur(4px);
     box-shadow: 0 0 1rem 1px #00000054;
   padding:10px 0;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 999;
+    height: auto;
+    z-index: 1000;
     @include small-laptop{
       position: relative;
       padding: 5px 0;
@@ -146,16 +145,7 @@ backdrop-filter: blur(5px);
             display: none;
           }
       }
-      .shadow {
-        display: none;
-          position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
-        z-index: 999;
-      }
+     
       .sidebar{
           display: none;
           width: 100%;
@@ -165,7 +155,7 @@ backdrop-filter: blur(5px);
           position: fixed;
           top: -400px;
           left: 0;
-          z-index: 1000;
+          z-index: 2100;
           transition: all 0.4s ease-in-out;
           font-family: "montserrat", sans-serif;
             @include mobile{
@@ -209,6 +199,16 @@ backdrop-filter: blur(5px);
       }
     }
    
+  }
+  .shadow {
+    display: none;
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
+    z-index: 999;
   }
   .main-container{
     font-family: "Baskervville SC", serif;
@@ -288,7 +288,7 @@ backdrop-filter: blur(5px);
         text-transform: capitalize;
         font-weight: 600;
         background-color: #3d3d3d4b;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(3px);
         letter-spacing: 1px;
         transition: all 0.3s ease-in-out;
         display: inline-block;
@@ -303,7 +303,7 @@ backdrop-filter: blur(5px);
     width: 100%;
     height: 400px;
     object-fit:cover;
-    filter: brightness(76%);
+    filter: brightness(79%);
     @include large-tablet{
       height:600px;
     }
@@ -647,7 +647,7 @@ transform: translate(-50%, -50%);
   width: 100%;
   width: 100%;
   background-image: url(../model/yellow-lights.jpg);
-  background-position: center 30%;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: darken;
@@ -662,13 +662,13 @@ transform: translate(-50%, -50%);
   row-gap: 10px;
   i{
     color: #ffffff;
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding: 10px 0;
   }
   .span-num{
     display: inline-block;
     color: #ffffff;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     font-weight: 400;
     b{
       font-size: 1rem;
@@ -1064,6 +1064,7 @@ p{
  @include mobile{
 text-align: center;
 font-size: 0.9rem;
+line-height: 1.9rem;
 }
 @include tablet{
   text-align: center;
@@ -1189,19 +1190,16 @@ h6{
  
 }
 .banner-contact{
-  background-image: url(../model/lights-background-mobile.jpg);
+ background-image: url(../model/lights-background-desktop.jpg);
   background-attachment: fixed;
   width: 100%;
   width: 100%;
-background-position: center;
+background-position: center center;
 background-size: cover;
 background-repeat: no-repeat;
 background-blend-mode: darken;
 background-color: #070a0c7c;
 scroll-behavior: smooth;
-@include small-laptop{
-  background-image: url(../model/lights-background-desktop.jpg);
-}
   .banner-contact-text{
     text-align: center;
     padding: 140px 0;
