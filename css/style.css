@@ -19,7 +19,7 @@ body {
   }
 }
 header {
-  background: rgba(202, 213, 214, 0.4862745098);
+  background: rgba(183, 206, 206, 0.2196078431);
   backdrop-filter: blur(4px);
   box-shadow: 0 0 1rem 1px rgba(0, 0, 0, 0.3294117647);
   padding: 10px 0;
