@@ -1,3 +1,15 @@
+     // loading animation
+     document.addEventListener('DOMContentLoaded', function(){
+        let loading = document.getElementById("loader-wraper");
+
+        loading.style.transition = "opacity 0.5s ease-out"; // Smooth transition
+        loading.style.opacity = "0"; // Fade out
+
+        setTimeout(function(){
+        loading.style.display= "none"; // Hide after fading out
+        }, 500); // Match with the transition time
+        });
+
 
     // side bar
     document.addEventListener("DOMContentLoaded", ()=> {
@@ -19,6 +31,7 @@
             shadows.addEventListener('click', closeMenu);
             menulink.addEventListener('click', closeMenu);
         });
+        
         // swiper slider
         document.addEventListener('DOMContentLoaded', function() {
             
@@ -190,9 +203,6 @@
     });
   });
 
- 
-  
-
   // contact 
   document.addEventListener("DOMContentLoaded", function() {
     // GSAP animation for the image
@@ -239,3 +249,6 @@
        }
     });
  });
+
+
+
