@@ -16,6 +16,69 @@ body{
     margin: 0 auto;
   }
 }
+
+.loader-wraper{
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 4444;
+  width: 100%;
+  height: 100vh;
+ background: #fdfdfd;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+  .loader {
+    position: relative;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 2px;
+    width: 80px;
+    height: 80px;
+  
+    > div {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(55deg, rgba(132, 2, 150, 0.842), #a80672da);
+      transform: scale(0.0);
+      transform-origin: center center;
+      animation: loader 2s infinite linear;
+
+    
+      
+      &:nth-of-type(1),
+      &:nth-of-type(5), 
+      &:nth-of-type(9) {
+        animation-delay: 0.4s;
+      }
+      
+      &:nth-of-type(4),
+      &:nth-of-type(8) {
+        animation-delay: 0.2s;
+      }
+      
+      &:nth-of-type(2),
+      &:nth-of-type(6) {
+        animation-delay: 0.6s;
+      }
+      
+      &:nth-of-type(3) {
+        animation-delay: 0.8s;
+      }
+    }
+  }
+
+}
+@keyframes loader {
+	0%   { transform: scale(0.0); }
+	40%  { transform: scale(1.0); }
+	80%  { transform: scale(1.0); }
+	100% { transform: scale(0.0); }
+}
+
 header{
   background: #b7cece38;
   backdrop-filter: blur(4px);
@@ -45,10 +108,13 @@ header{
         filter: dropshadow(color=#000000, offx=1, offy=1);
         margin: 0;
         padding: 0;
+        display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
         h2{
           letter-spacing: 2px;
           font-family: "Baskervville SC", serif;
-          display: inline-block;
           text-transform: capitalize;
           padding: 0;
           margin: 0;
@@ -56,7 +122,10 @@ header{
           color: rgb(0, 0, 0);
      &::first-letter{
       color: rgb(142, 2, 161);
+      font-size: 2rem;
       font-weight: 900;
+      font-family: "Ballet", cursive;
+      padding-right: 5px;
      }
      @include small-laptop{
       font-size: 2.4rem;
@@ -64,7 +133,6 @@ header{
         }
         span{
           font-family:"roboto", sans-serif;
-          display: inline-block;
           margin: 0;
           padding-left: 7px;
           font-size: 0.7rem;
@@ -260,6 +328,7 @@ header{
         span{
           text-wrap: nowrap;
          display: block;
+       
          @include mobile{
           font-size: 1.8rem;
           line-height: 2.7rem;
@@ -283,7 +352,7 @@ header{
         margin-top: 10px;
         text-decoration: none;
         padding: 10px 20px;
-        border-radius: 10px;
+        border-radius: 20px;
         color: rgb(249, 250, 250);
         text-transform: capitalize;
         font-weight: 600;
@@ -1641,3 +1710,16 @@ padding-bottom: 20px;
     }
   }
 }
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Keep it above everything else */
+}
+
